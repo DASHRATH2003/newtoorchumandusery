@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .logo-text { font-family: Arial, sans-serif; font-weight: bold; }
+    .tagline { font-family: Arial, sans-serif; font-size: 12px; }
+  </style>
+  <g transform="translate(10,10)">
+    <!-- Car icon -->
+    <path d="M30,30 C30,30 35,25 40,25 L60,25 C65,25 70,30 70,30 L75,40 L25,40 L30,30 Z" fill="#2A9D8F"/>
+    <rect x="20" y="40" width="60" height="15" fill="#2A9D8F"/>
+    <circle cx="30" cy="55" r="6" fill="#264653"/>
+    <circle cx="70" cy="55" r="6" fill="#264653"/>
+    
+    <!-- Mountain in background -->
+    <path d="M0,45 L20,20 L40,45 Z" fill="#264653"/>
+    <path d="M35,45 L55,15 L75,45 Z" fill="#264653"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="100" y="35" class="logo-text" fill="#2A9D8F">RUTHVIK RENTALS</text>
+  <text x="100" y="50" class="tagline" fill="#264653">Non-stop Travelling and Healing</text>
+</svg> 
