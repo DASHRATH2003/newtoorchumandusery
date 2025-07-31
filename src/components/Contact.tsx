@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
 
@@ -184,4 +183,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;

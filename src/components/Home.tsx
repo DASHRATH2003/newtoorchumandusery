@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Footer from './Footer';
 
 interface Bus {
@@ -11,7 +11,7 @@ interface Bus {
 }
 
 interface Fact {
-  icon: JSX.Element;
+  icon: React.ReactNode;
   count: string;
   label: string;
 }

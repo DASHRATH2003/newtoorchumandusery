@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Footer from './Footer';
-import { vehicles, Vehicle } from '../data/vehicleData';
+import { vehicles } from '../data/vehicleData';
 
 const Rentals = () => {
   const navigate = useNavigate();
-  const [currentPage, setCurrentPage] = useState(1);
+  // const [currentPage, setCurrentPage] = useState(1);
   const [selectedLocation, setSelectedLocation] = useState<string>('');
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 

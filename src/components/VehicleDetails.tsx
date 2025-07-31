@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import Footer from './Footer';
-import { getVehicleById, getSimilarVehicles, Vehicle } from '../data/vehicleData';
+import { getVehicleById, getSimilarVehicles } from '../data/vehicleData';
+import type { Vehicle } from '../data/vehicleData';
 
 interface Feature {
-  icon: JSX.Element;
+  icon: React.ReactNode;
   text: string;
 }
 
@@ -72,7 +73,7 @@ const VehicleDetails = () => {
   };
 
   // Map feature icons based on icon name
-  const getFeatureIcon = (iconName: string): JSX.Element => {
+  const getFeatureIcon = (iconName: string): React.ReactNode => {
     switch (iconName) {
       case 'seat':
         return (

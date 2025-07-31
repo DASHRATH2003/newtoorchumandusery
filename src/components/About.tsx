@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
 
@@ -332,4 +332,4 @@ Whether you're planning a weekend escape, a business trip, or a family holiday, 
   );
 };
 
-export default About; 
+export default About;
