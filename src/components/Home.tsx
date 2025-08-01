@@ -137,7 +137,7 @@ const Home = () => {
     {
       id: 9,
       name: 'Maruti Swift Dzire',
-      image: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/141867/swift-dzire-exterior-right-front-three-quarter-71.jpeg',
+      image: 'https://i.pinimg.com/736x/0e/0d/a2/0e0da2818b70f0eed5f478bd4a893b13.jpg',
       category: 'Cars',
       location: 'Bangalore',
       price: 'Call for Price',
@@ -263,7 +263,11 @@ const Home = () => {
   useEffect(() => {
     if (!isPaused) {
       const timer = setInterval(() => {
-        setCurrentBusIndex((prev) => (prev + 1) % busData.length);
+        const isMobile = window.innerWidth < 640;
+        const isTablet = window.innerWidth >= 640 && window.innerWidth < 768;
+        const cardsToShow = isMobile ? 1 : isTablet ? 2 : 3;
+        
+        setCurrentBusIndex((prev) => (prev < busData.length - cardsToShow ? prev + 1 : 0));
       }, 3000); // Change every 3 seconds
 
       return () => clearInterval(timer);
@@ -288,7 +292,7 @@ const Home = () => {
           <path d="M5 11l2-4h10l2 4M3 14v-3h18v3M5 18v-4h14v4M7 18h10M6 6h12"/>
         </svg>
       ),
-      count: "0+",
+      count: "500+",
       label: "Happy Customers"
     },
     {
@@ -297,7 +301,7 @@ const Home = () => {
           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
         </svg>
       ),
-      count: "0+",
+      count: "100+",
       label: "Count of Cars"
     },
     {
@@ -306,7 +310,7 @@ const Home = () => {
           <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
         </svg>
       ),
-      count: "0+",
+      count: "1700+",
       label: "Car Rents"
     },
     {
@@ -315,8 +319,8 @@ const Home = () => {
           <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
       ),
-      count: "0+",
-      label: "Total Kilometer"
+      count: "200+",
+      label: "New Customers"
     }
   ];
 
@@ -344,9 +348,7 @@ const Home = () => {
                   Choose the Perfect
                 </h1>
                 <div className="text-2xl md:text-[48px] font-bold text-orange-500 animate-slide-in-right">
-                  Vehicle for Your
-                  <br />
-                  Journey
+                  Vehicle for Your Journey
                 </div>
               </div>
 
@@ -473,13 +475,13 @@ const Home = () => {
        
 
         {/* How It Works Section */}
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-4xl font-bold text-gray-900 mb-2">How It Works</h2>
-            <p className="text-gray-600">Rent a Car Easily</p>
+        <div className="container mx-auto px-4 py-8 md:py-16">
+          <div className="text-center mb-8 md:mb-12 animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">How It Works</h2>
+            <p className="text-gray-600 text-sm md:text-base">Rent a Car Easily</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {/* Steps with hover animations */}
             <div className="text-center transform hover:scale-105 transition-all duration-300 animate-slide-in-left">
               <div className="relative mx-auto w-24 h-24 mb-6">
@@ -535,12 +537,12 @@ const Home = () => {
           </div>
 
           {/* Category Filter Buttons */}
-          <div className="flex justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
             {vehicleCategories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-8 py-3 rounded-full text-lg transition-all duration-300 ${
+                className={`px-4 md:px-8 py-2 md:py-3 rounded-full text-sm md:text-lg transition-all duration-300 ${
                   activeCategory === category
                     ? 'bg-teal-600 text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-100'
@@ -596,16 +598,16 @@ const Home = () => {
         </div>
 
         {/* Facts By The Numbers Section */}
-        <div className="relative bg-[#1E1E1E] py-20">
+        <div className="relative bg-[#1E1E1E] py-12 md:py-20">
           {/* Background Pattern - Right */}
-          <div className="absolute top-0 right-0 w-48 h-48 opacity-10">
+          <div className="absolute top-0 right-0 w-32 md:w-48 h-32 md:h-48 opacity-10">
             <div className="w-full h-full">
               {[...Array(5)].map((_, i) => (
                 <div 
                   key={i}
-                  className="absolute w-12 h-[1px] bg-white rotate-45"
+                  className="absolute w-8 md:w-12 h-[1px] bg-white rotate-45"
                   style={{ 
-                    transform: `translateY(${i * 12}px) translateX(${i * 12}px) rotate(45deg)` 
+                    transform: `translateY(${i * 8}px) translateX(${i * 8}px) rotate(45deg)` 
                   }}
                 ></div>
               ))}
@@ -613,15 +615,15 @@ const Home = () => {
           </div>
 
           <div className="container mx-auto px-4">
-            <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold text-white">Facts By The Numbers</h2>
+            <div className="text-center mb-6 md:mb-8">
+              <h2 className="text-2xl md:text-4xl font-bold text-white">Facts By The Numbers</h2>
               <div className="relative inline-block mt-2">
-                <div className="w-16 h-1 bg-orange-500 mx-auto"></div>
+                <div className="w-12 md:w-16 h-1 bg-orange-500 mx-auto"></div>
               </div>
-              <p className="text-gray-400 mt-4">Let the numbers speak for themselves</p>
+              <p className="text-gray-400 mt-3 md:mt-4 text-sm md:text-base">Let the numbers speak for themselves</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {facts.map((fact, index) => (
                 <div 
                   key={index}
@@ -661,10 +663,16 @@ const Home = () => {
           <div className="relative">
             {/* Left Arrow */}
             <button 
-              onClick={() => setCurrentBusIndex((prev) => (prev - 1 + busData.length) % busData.length)}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 md:w-10 h-8 md:h-10 flex items-center justify-center bg-white rounded-full shadow-lg hover:bg-gray-100 -translate-x-2 md:-translate-x-5"
+              onClick={() => {
+                const isMobile = window.innerWidth < 640;
+                const isTablet = window.innerWidth >= 640 && window.innerWidth < 768;
+                const cardsToShow = isMobile ? 1 : isTablet ? 2 : 3;
+                
+                setCurrentBusIndex((prev) => (prev > 0 ? prev - 1 : busData.length - cardsToShow));
+              }}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 md:w-10 h-8 md:h-10 flex items-center justify-center bg-white rounded-full shadow-lg hover:bg-gray-100 -translate-x-1 sm:-translate-x-2 md:-translate-x-5"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
@@ -676,13 +684,13 @@ const Home = () => {
               onMouseLeave={() => setIsPaused(false)}
             >
               <div 
-                className="flex transition-transform duration-1000 ease-in-out"
+                className="flex gap-2 md:gap-4 transition-transform duration-1000 ease-in-out"
                 style={{ 
-                  transform: `translateX(-${currentBusIndex * 100}%)` 
+                  transform: `translateX(-${currentBusIndex * (window.innerWidth < 640 ? 100 : window.innerWidth < 768 ? 50 : 33.33)}%)` 
                 }}
               >
                 {busData.map((bus, index) => (
-                  <div key={index} className="w-full sm:w-1/2 md:w-1/3 flex-shrink-0 px-2 md:px-4">
+                  <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 flex-shrink-0 px-1 sm:px-2 md:px-4">
                     <div className="bg-white rounded-lg overflow-hidden shadow-md transform transition-all duration-500">
                       <div className="relative h-[200px] md:h-[300px]">
                         <div className="absolute top-4 left-4 bg-white text-sm px-3 py-1 rounded-full shadow-md z-10">
@@ -730,10 +738,16 @@ const Home = () => {
 
             {/* Right Arrow */}
             <button 
-              onClick={() => setCurrentBusIndex((prev) => (prev + 1) % busData.length)}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-8 md:w-10 h-8 md:h-10 flex items-center justify-center bg-white rounded-full shadow-lg hover:bg-gray-100 translate-x-2 md:translate-x-5"
+              onClick={() => {
+                const isMobile = window.innerWidth < 640;
+                const isTablet = window.innerWidth >= 640 && window.innerWidth < 768;
+                const cardsToShow = isMobile ? 1 : isTablet ? 2 : 3;
+                
+                setCurrentBusIndex((prev) => (prev < busData.length - cardsToShow ? prev + 1 : 0));
+              }}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-8 md:w-10 h-8 md:h-10 flex items-center justify-center bg-white rounded-full shadow-lg hover:bg-gray-100 translate-x-1 sm:translate-x-2 md:translate-x-5"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
@@ -741,26 +755,32 @@ const Home = () => {
 
           {/* Navigation Dots */}
           <div className="flex justify-center mt-6 space-x-2">
-            {busData.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentBusIndex(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  index === currentBusIndex ? 'w-8 bg-orange-500' : 'w-2 bg-gray-300'
-                }`}
-              />
-            ))}
+            {(() => {
+              const isMobile = window.innerWidth < 640;
+              const isTablet = window.innerWidth >= 640 && window.innerWidth < 768;
+              const cardsToShow = isMobile ? 1 : isTablet ? 2 : 3;
+              
+              return [...Array(Math.ceil(busData.length / cardsToShow))].map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentBusIndex(index * cardsToShow)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    Math.floor(currentBusIndex / cardsToShow) === index ? 'w-6 md:w-8 bg-orange-500' : 'w-2 bg-gray-300'
+                  }`}
+                />
+              ))
+            })()} 
           </div>
         </div>
 
         {/* Why Choose Us Section */}
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-4xl font-bold text-gray-900 mb-2">Why Choose Us</h2>
+        <div className="container mx-auto px-4 py-8 md:py-16">
+          <div className="text-center mb-8 md:mb-12 animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Why Choose Us</h2>
             <div className="relative">
-              <div className="absolute left-1/2 -translate-x-1/2 w-24 h-1 bg-orange-500"></div>
+              <div className="absolute left-1/2 -translate-x-1/2 w-16 md:w-24 h-1 bg-orange-500"></div>
             </div>
-            <p className="text-gray-600 mt-6">Why our customers trust us</p>
+            <p className="text-gray-600 mt-4 md:mt-6 text-sm md:text-base">Why our customers trust us</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -804,17 +824,17 @@ const Home = () => {
         </div>
 
         {/* Testimonials Section */}
-        <div className="relative bg-[#1E1E1E] py-12 md:py-16 overflow-hidden">
+        <div className="relative bg-[#1E1E1E] py-8 md:py-16 overflow-hidden">
           {/* Orange Diagonal Line */}
-          <div className="absolute right-0 top-0 w-[40%] h-full bg-orange-500 transform skew-x-12 -translate-x-16"></div>
+          <div className="absolute right-0 top-0 w-[30%] md:w-[40%] h-full bg-orange-500 transform skew-x-12 -translate-x-12 md:-translate-x-16"></div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">What people say about us?</h2>
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-4xl font-bold text-white mb-2">What people say about us?</h2>
               <div className="relative inline-block mt-2">
-                <div className="w-24 h-1 bg-orange-500 mx-auto"></div>
+                <div className="w-16 md:w-24 h-1 bg-orange-500 mx-auto"></div>
               </div>
-              <p className="text-gray-400 mt-4 text-sm md:text-base">Words of appreciation from customers</p>
+              <p className="text-gray-400 mt-3 md:mt-4 text-sm md:text-base">Words of appreciation from customers</p>
             </div>
 
             {/* Testimonials Slider */}
@@ -828,24 +848,24 @@ const Home = () => {
                     key={testimonial.id}
                     className="w-full flex-shrink-0 px-4"
                   >
-                    <div className={`p-6 md:p-8 rounded-lg transform transition-all duration-300 ${
+                    <div className={`p-4 md:p-8 rounded-lg transform transition-all duration-300 ${
                       index % 2 === 0 ? 'bg-teal-600' : 'bg-white'
                     }`}>
-                      <div className="flex flex-col md:flex-row md:items-center gap-4 mb-6">
-                        <div className="flex-shrink-0">
+                      <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-4 mb-4 md:mb-6">
+                        <div className="flex-shrink-0 mx-auto md:mx-0">
                           <img 
                             src={testimonial.image}
                             alt={testimonial.name}
-                            className={`w-16 h-16 rounded-full border-2 ${
+                            className={`w-14 h-14 md:w-16 md:h-16 rounded-full border-2 ${
                               index % 2 === 0 ? 'border-white' : 'border-teal-600'
                             }`}
                           />
                         </div>
-                        <div>
-                          <h4 className={`text-lg font-semibold ${
+                        <div className="text-center md:text-left">
+                          <h4 className={`text-base md:text-lg font-semibold ${
                             index % 2 === 0 ? 'text-white' : 'text-gray-900'
                           }`}>{testimonial.name}</h4>
-                          <div className="flex items-center mt-1">
+                          <div className="flex items-center justify-center md:justify-start mt-1">
                             {[...Array(5)].map((_, i) => (
                               <svg 
                                 key={i}
@@ -872,14 +892,14 @@ const Home = () => {
               </div>
 
               {/* Navigation Dots */}
-              <div className="flex justify-center mt-6 space-x-2">
+              <div className="flex justify-center mt-4 md:mt-6 space-x-2">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonialIndex(index)}
                     className={`h-2 rounded-full transition-all duration-300 ${
                       index === currentTestimonialIndex 
-                        ? 'w-8 bg-orange-500' 
+                        ? 'w-6 md:w-8 bg-orange-500' 
                         : 'w-2 bg-gray-400 hover:bg-gray-300'
                     }`}
                   />
@@ -908,13 +928,13 @@ const Home = () => {
         </div>
 
         {/* FAQ Section */}
-        <div className="container mx-auto px-4 py-16 bg-gray-50">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-2">Got Questions? We've Got Answers!</h2>
+        <div className="container mx-auto px-4 py-8 md:py-16 bg-gray-50">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-2">Got Questions? We've Got Answers!</h2>
             <div className="relative inline-block mt-2">
-              <div className="w-24 h-1 bg-orange-500 mx-auto"></div>
+              <div className="w-16 md:w-24 h-1 bg-orange-500 mx-auto"></div>
             </div>
-            <p className="text-gray-600 mt-6">
+            <p className="text-gray-600 mt-4 md:mt-6 text-sm md:text-base">
             Have questions? We've got answers!<br />
             Check out our FAQs about services, pricing, and booking.<br />
             Need more help? Just reach out!
@@ -929,11 +949,11 @@ const Home = () => {
               >
                 <button
                   onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
-                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-300"
+                  className="w-full px-4 md:px-6 py-3 md:py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-300"
                 >
-                  <span className="font-semibold text-gray-900">{faq.question}</span>
+                  <span className="font-semibold text-gray-900 text-sm md:text-base">{faq.question}</span>
                   <svg
-                    className={`w-5 h-5 text-orange-500 transform transition-transform duration-300 ${
+                    className={`w-4 h-4 md:w-5 md:h-5 text-orange-500 transform transition-transform duration-300 ${
                       openFaqIndex === index ? 'rotate-180' : ''
                     }`}
                     fill="none"
@@ -949,11 +969,11 @@ const Home = () => {
                   </svg>
                 </button>
                 <div
-                  className={`px-6 overflow-hidden transition-all duration-300 ${
-                    openFaqIndex === index ? 'max-h-40 py-4' : 'max-h-0'
+                  className={`px-4 md:px-6 overflow-hidden transition-all duration-300 ${
+                    openFaqIndex === index ? 'max-h-60 py-3 md:py-4' : 'max-h-0'
                   }`}
                 >
-                  <p className="text-gray-600">{faq.answer}</p>
+                  <p className="text-gray-600 text-xs md:text-sm">{faq.answer}</p>
                 </div>
               </div>
             ))}
