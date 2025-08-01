@@ -77,7 +77,7 @@ const About = () => {
 
           {/* Content Section */}
           <div className="w-full md:w-1/2">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">ABOUT RUTHVIK RENTALS</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">ABOUT SHREE CHAMUNDESHWARI HOLIDAYS </h2>
             <p className="text-gray-600 mb-6 font-serif">
             Shree Chamundeshwari Holidays is one of Bengaluru’s most trusted and experienced travel and vehicle rental service providers. With over a decade of expertise, we offer a wide fleet of well-maintained cars and travel solutions at competitive prices designed to suit every budget and need.
 

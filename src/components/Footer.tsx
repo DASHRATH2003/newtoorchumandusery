@@ -78,14 +78,7 @@ const Footer = () => {
                   Contact Us
                 </Link>
               </li>
-              <li>
-                <Link to="/faq" className="text-gray-400 hover:text-orange-500 transition-colors duration-300 flex items-center group">
-                  <svg className="w-4 h-4 mr-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
-                  </svg>
-                  FAQ
-                </Link>
-              </li>
+             
             </ul>
           </div>
 

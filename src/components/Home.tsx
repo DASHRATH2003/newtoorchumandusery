@@ -45,7 +45,7 @@ const Home = () => {
       title: "Tempo Traveller"
     },
     {
-      url: "https://www.coimbatoretourstravels.com/images/fleets/detail/9.jpg",
+      url: "https://mbtours.in/assets/img/vehicle/img-9.jpg",
       title: "Mini Bus"
     },
     {
@@ -57,6 +57,8 @@ const Home = () => {
       title: "AC Bus"
     }
   ];
+
+  
 
   const allVehicles = [
     // Buses
@@ -137,7 +139,7 @@ const Home = () => {
     {
       id: 9,
       name: 'Maruti Swift Dzire',
-      image: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/141867/swift-dzire-exterior-right-front-three-quarter-71.jpeg',
+      image: 'https://i.pinimg.com/736x/0e/0d/a2/0e0da2818b70f0eed5f478bd4a893b13.jpg',
       category: 'Cars',
       location: 'Bangalore',
       price: 'Call for Price',
@@ -194,7 +196,7 @@ const Home = () => {
     {
       type: 'Mini Bus',
       name: 'Mini Bus 15 Seater',
-      image: 'https://5.imimg.com/data5/XU/UQ/EP/SELLER-2036047/15-seater-luxury-mini-bus.jpg',
+      image: 'https://mbtours.in/assets/img/vehicle/img-9.jpg',
       location: 'Bangalore',
       price: 'Call for Price'
     }

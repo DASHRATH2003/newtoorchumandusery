@@ -281,7 +281,7 @@ export const vehicles: Vehicle[] = [
   {
     id: 9,
     name: 'Maruti Swift Dzire',
-    image: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/141867/swift-dzire-exterior-right-front-three-quarter-71.jpeg',
+    image: 'https://i.pinimg.com/736x/0e/0d/a2/0e0da2818b70f0eed5f478bd4a893b13.jpg',
     category: 'Cars',
     location: 'Bangalore',
     price: 'Call for Price',
