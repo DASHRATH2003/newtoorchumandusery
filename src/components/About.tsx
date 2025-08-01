@@ -269,7 +269,7 @@ Whether you're planning a weekend escape, a business trip, or a family holiday, 
                   className="w-12 h-12 rounded-full"
                 />
                 <div>
-                  <h4 className="text-gray-900 font-semibold">NISCHAL G</h4>
+                  <h4 className="text-gray-900 font-semibold">NEHA</h4>
                   <div className="flex items-center">
                     {[...Array(5)].map((_, i) => (
                       <svg 
@@ -285,7 +285,10 @@ Whether you're planning a weekend escape, a business trip, or a family holiday, 
                 </div>
               </div>
               <p className="text-gray-600 text-sm">
-                "We took a  Shree Chamundeshwari Holiday car for 3 days. Everything worked out wonderfully. The car was brought to us at the hotel, everything was explained properly. Telephone number exchanged so that we can be contacted straight away if there are any problems. So we were very satisfied."
+                We rented a car from Shree Chamundeshwari Holidays for 3 days, and the experience was excellent.
+The car was delivered to our hotel on time, and all instructions were clearly explained. We also exchanged contact numbers for quick support if needed. Overall, we were highly satisfied with the service.
+
+
               </p>
             </div>
 
@@ -298,7 +301,7 @@ Whether you're planning a weekend escape, a business trip, or a family holiday, 
                   className="w-12 h-12 rounded-full"
                 />
                 <div>
-                  <h4 className="text-gray-900 font-semibold">AMRUTA RAO</h4>
+                  <h4 className="text-gray-900 font-semibold">AAMIR</h4>
                   <div className="flex items-center">
                     {[...Array(5)].map((_, i) => (
                       <svg 
@@ -314,7 +317,7 @@ Whether you're planning a weekend escape, a business trip, or a family holiday, 
                 </div>
               </div>
               <p className="text-gray-600 text-sm">
-                "Professional and very helpful  Shree Chamundeshwari Holiday. Fantastic airport car delivery and collection service. Well maintained car. Highly recommended!"
+               The airport pickup and drop-off were seamless, and the car was clean and well-maintained. I would definitely recommend them!
               </p>
             </div>
           </div>

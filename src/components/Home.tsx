@@ -203,31 +203,31 @@ const Home = () => {
   const testimonials = [
     {
       id: 1,
-      name: "NISCHAL G",
+      name: "Delip",
       rating: 4.0,
       image: "https://randomuser.me/api/portraits/men/1.jpg",
-      text: "We took a small car for 3 days. Everything worked out wonderfully. The car was brought to us at the hotel, everything was explained properly. Telephone number exchanged so that we can be contacted straight away if there are any problems. So we were very satisfied."
+      text: "The car was delivered directly to our hotel, and all necessary details were clearly explained. We exchanged contact numbers so we could reach out immediately in case of any issues. Overall, we were very satisfied with the service."
     },
     {
       id: 2,
-      name: "AMRUTA RAO",
+      name: "Manoj",
       rating: 5.0,
       image: "https://randomuser.me/api/portraits/women/1.jpg",
-      text: "Professional and very helpful VEHICLE rental. Fantastic airport car delivery and collection service. Well maintained car. Highly recommended!"
+      text: "The airport delivery and pickup were seamless, and the car was in excellent condition. Highly recommended for a hassle-free experience."
     },
     {
       id: 3,
-      name: "GURURAJA RAO",
+      name: "zafir",
       rating: 5.0,
       image: "https://randomuser.me/api/portraits/men/2.jpg",
-      text: "No problems at all. The VEHICLE was in top condition. Gladly again and driver was very helpful."
+      text: "The vehicle was in excellent condition, and the driver was exceptionally helpful. Would definitely choose this service again."
     },
     {
       id: 4,
-      name: "NAVEEN RAO",
+      name: "Aman",
       rating: 5.0,
       image: "https://randomuser.me/api/portraits/men/3.jpg",
-      text: "Thank you so much for sharing this. Ruthvik rentals is one of the leading company for rental Cabs in Bangalore includes a wide range of vehicle models, carefully selected to meet the exacting needs of large corporate houses & customer on leisure."
+      text: "Shree Chamundeshwari Holidays Rentals is one of the leading cab rental companies in Bangalore, offering a wide selection of well-maintained vehicles. Our fleet is thoughtfully curated to meet the needs of both corporate clients and leisure travelers alike."
     }
   ];
 
