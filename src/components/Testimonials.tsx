@@ -23,7 +23,7 @@ const Testimonials = () => {
       name: "AMRUTA RAO",
       image: "https://randomuser.me/api/portraits/women/1.jpg",
       rating: 5.0,
-      text: "Professional and very helpful VEHICLE rental. Fantastic airport car delivery and collection service. Well maintained car. Highly recommended!"
+      text: "Professional and very helpful  Shree Chamundeshwari Holiday. Fantastic airport car delivery and collection service. Well maintained car. Highly recommended!"
     },
     {
       id: 3,
@@ -37,7 +37,7 @@ const Testimonials = () => {
       name: "NAVEEN RAO",
       image: "https://randomuser.me/api/portraits/men/3.jpg",
       rating: 5.0,
-      text: "Thank you so much for sharing this. Ruthvik rentals is one of the leading company for rental Cabs in Bangalore includes a wide range of vehicle models, carefully selected to meet the exacting needs of large corporate houses & customer on leisure."
+      text: "Thank you so much for sharing this. Shree Chamundeshwari Holiday rentals is one of the leading company for rental Cabs in Bangalore includes a wide range of vehicle models, carefully selected to meet the exacting needs of large corporate houses & customer on leisure."
     }
   ];
 

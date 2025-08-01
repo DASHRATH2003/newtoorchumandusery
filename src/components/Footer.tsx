@@ -13,7 +13,7 @@ const Footer = () => {
               <span className="absolute bottom-0 left-0 w-12 h-1 bg-orange-500"></span>
             </h3>
             <p className="text-gray-400 leading-relaxed">
-              Your trusted partner for all your vehicle rental needs in Karnataka. We provide quality vehicles with professional service at competitive prices. Experience hassle-free booking and exceptional customer support.
+              Your trusted partner for all your  Shree Chamundeshwari Holiday needs in Karnataka. We provide quality vehicles with professional service at competitive prices. Experience hassle-free booking and exceptional customer support.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors duration-300">

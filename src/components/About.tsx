@@ -285,7 +285,7 @@ Whether you're planning a weekend escape, a business trip, or a family holiday, 
                 </div>
               </div>
               <p className="text-gray-600 text-sm">
-                "We took a rental car for 3 days. Everything worked out wonderfully. The car was brought to us at the hotel, everything was explained properly. Telephone number exchanged so that we can be contacted straight away if there are any problems. So we were very satisfied."
+                "We took a  Shree Chamundeshwari Holiday car for 3 days. Everything worked out wonderfully. The car was brought to us at the hotel, everything was explained properly. Telephone number exchanged so that we can be contacted straight away if there are any problems. So we were very satisfied."
               </p>
             </div>
 
@@ -314,7 +314,7 @@ Whether you're planning a weekend escape, a business trip, or a family holiday, 
                 </div>
               </div>
               <p className="text-gray-600 text-sm">
-                "Professional and very helpful VEHICLE rental. Fantastic airport car delivery and collection service. Well maintained car. Highly recommended!"
+                "Professional and very helpful  Shree Chamundeshwari Holiday. Fantastic airport car delivery and collection service. Well maintained car. Highly recommended!"
               </p>
             </div>
           </div>
