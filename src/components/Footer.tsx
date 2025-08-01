@@ -123,8 +123,19 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Ruthvik Rentals. All Rights Reserved.
+              © {new Date().getFullYear()} SHREE CHAMUNDESHWARI HOLIDAYS. All Rights Reserved.
             </p>
+              <div className="flex items-center space-x-2 text-sm">
+              <span className="text-yellow-400 font-semibold"> Powered By</span>
+              <a 
+                href="https://www.innomatricstech.com/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-yellow-400 font-bold hover:text-white transition-colors"
+              >
+                INNOMATRICS TECH
+              </a>
+            </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-gray-400 hover:text-orange-500 text-sm transition-colors duration-300">
                 Privacy Policy
