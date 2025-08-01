@@ -45,7 +45,7 @@ const Home = () => {
       title: "Tempo Traveller"
     },
     {
-      url: "https://mbtours.in/assets/img/vehicle/img-9.jpg",
+      url: "https://www.coimbatoretourstravels.com/images/fleets/detail/9.jpg",
       title: "Mini Bus"
     },
     {
@@ -57,8 +57,6 @@ const Home = () => {
       title: "AC Bus"
     }
   ];
-
-  
 
   const allVehicles = [
     // Buses
@@ -139,7 +137,7 @@ const Home = () => {
     {
       id: 9,
       name: 'Maruti Swift Dzire',
-      image: 'https://i.pinimg.com/736x/0e/0d/a2/0e0da2818b70f0eed5f478bd4a893b13.jpg',
+      image: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/141867/swift-dzire-exterior-right-front-three-quarter-71.jpeg',
       category: 'Cars',
       location: 'Bangalore',
       price: 'Call for Price',
@@ -196,7 +194,7 @@ const Home = () => {
     {
       type: 'Mini Bus',
       name: 'Mini Bus 15 Seater',
-      image: 'https://mbtours.in/assets/img/vehicle/img-9.jpg',
+      image: 'https://5.imimg.com/data5/XU/UQ/EP/SELLER-2036047/15-seater-luxury-mini-bus.jpg',
       location: 'Bangalore',
       price: 'Call for Price'
     }
@@ -215,21 +213,21 @@ const Home = () => {
       name: "AMRUTA RAO",
       rating: 5.0,
       image: "https://randomuser.me/api/portraits/women/1.jpg",
-      text: "Professional and very helpful  Shree Chamundeshwari Holiday. Fantastic airport car delivery and collection service. Well maintained car. Highly recommended!"
+      text: "Professional and very helpful VEHICLE rental. Fantastic airport car delivery and collection service. Well maintained car. Highly recommended!"
     },
     {
       id: 3,
       name: "GURURAJA RAO",
       rating: 5.0,
       image: "https://randomuser.me/api/portraits/men/2.jpg",
-      text: "No problems at all. The Shree Chamundeshwari Holiday was in top condition. Gladly again and driver was very helpful."
+      text: "No problems at all. The VEHICLE was in top condition. Gladly again and driver was very helpful."
     },
     {
       id: 4,
       name: "NAVEEN RAO",
       rating: 5.0,
       image: "https://randomuser.me/api/portraits/men/3.jpg",
-      text: "Thank you so much for sharing this.  Shree Chamundeshwari Holiday is one of the leading company for rental Cabs in Bangalore includes a wide range of vehicle models, carefully selected to meet the exacting needs of large corporate houses & customer on leisure."
+      text: "Thank you so much for sharing this. Ruthvik rentals is one of the leading company for rental Cabs in Bangalore includes a wide range of vehicle models, carefully selected to meet the exacting needs of large corporate houses & customer on leisure."
     }
   ];
 
@@ -679,10 +677,12 @@ const Home = () => {
             >
               <div 
                 className="flex transition-transform duration-1000 ease-in-out"
-                style={{ transform: `translateX(-${currentBusIndex * (100/3)}%)` }}
+                style={{ 
+                  transform: `translateX(-${currentBusIndex * 100}%)` 
+                }}
               >
                 {busData.map((bus, index) => (
-                  <div key={index} className="w-1/3 flex-shrink-0 px-2 md:px-4">
+                  <div key={index} className="w-full sm:w-1/2 md:w-1/3 flex-shrink-0 px-2 md:px-4">
                     <div className="bg-white rounded-lg overflow-hidden shadow-md transform transition-all duration-500">
                       <div className="relative h-[200px] md:h-[300px]">
                         <div className="absolute top-4 left-4 bg-white text-sm px-3 py-1 rounded-full shadow-md z-10">
